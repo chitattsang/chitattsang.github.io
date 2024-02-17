@@ -2,8 +2,21 @@
 
 <html>
   <head>
+    <script type="text/javascript">
+    try{
+        top.location.hostname;
+　　    if (top.location.hostname != window.location.hostname) {
+　　　　    top.location.href =window.location.href;
+　　    }
+    }
+    catch(e){
+　　    top.location.href = window.location.href;
+    }
+      </script>
+
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta http-equiv="X-Frame-Options" content="sameorigin" />
     <link rel="icon" href="./assets/images/chitat.ico" type="image/ico" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <i class="fa-solid fa-gamepad fa-sm"></i>
@@ -476,9 +489,11 @@
 
   <br>
 
-  <button onclick="showbtn3()" id="showbtn3"> Click here to browse the Atlist map (BETA) </button>
+  <button onclick="showbtn3()" id="showbtn3"> Click here to browse the Atlist map exercise. </button>
   <iframe id="map" src="https://my.atlist.com/map/a298ba8d-8d7b-485c-98e6-43548339e95d?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <script>
+  <div style="text-align:center" a href="https://my.atlist.com/billing"> I will fix this later. Budget is limited at this time because it charges $14.00 USD per month for the Atlist basic subscription. </div>
+
+<script>
       function showbtn3() {
         console.log(document.getElementById("map").style.display)
         if(document.getElementById("map").style.display === "block") {
@@ -616,6 +631,5 @@
      Link to custom JS
     -->
     <script src="./assets/javascript/javascript.js"></script>
-
   </body>
 </html>
